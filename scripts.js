@@ -6,7 +6,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 camera.position.z = 40;
 
-const threeTone = new THREE.TextureLoader().load('./threeTone.jpg')
+const threeTone = new THREE.TextureLoader().load('./img/threeTone.jpg')
 threeTone.minFilter = THREE.NearestFilter
 threeTone.magFilter = THREE.NearestFilter
 
@@ -60,6 +60,7 @@ for (var i = 0; i < 500; i++) {
     cube.position.y = parseInt((Math.random() * height - (height / 2)));
     cube.position.z = 1;
     cube.castShadow = true;
+    cube.receiveShadow = false;
 
     console.log()
 
